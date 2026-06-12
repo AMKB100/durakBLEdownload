@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Дурак — тестовая версия</title>
+  <meta name="description" content="Скачать тестовую Android-версию карточной игры Дурак." />
+  <meta name="theme-color" content="#0f5132" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="logo" aria-label="Логотип игры Дурак">
+        <div class="card card-left">♠</div>
+        <div class="card card-center">Д</div>
+        <div class="card card-right">♥</div>
+      </div>
+
+      <p class="eyebrow">Android · Test build</p>
+      <h1>Дурак</h1>
+      <p class="subtitle">Минималистичная тестовая версия карточной игры.</p>
+
+      <a class="download-button" href="downloads/Durak-test-v1.apk" download>
+        Скачать APK
+      </a>
+
+      <p class="file-note">
+        Версия: <strong>v0.1 test</strong> · Файл: <strong>Durak-test-v1.apk</strong>
+      </p>
+
+      <div class="checksum">
+        <span>SHA256:</span>
+        <code id="sha">ВСТАВЬТЕ_SHA256_СЮДА</code>
+        <button class="copy" type="button" onclick="copySha()">Копировать</button>
+      </div>
+
+      <div class="instructions">
+        <h2>Как установить</h2>
+        <ol>
+          <li>Нажмите «Скачать APK».</li>
+          <li>Откройте скачанный файл на Android.</li>
+          <li>Разрешите установку из браузера, если телефон попросит.</li>
+          <li>Если Play Protect покажет предупреждение, устанавливайте только если доверяете файлу.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      Тестовая сборка. Неофициальный релиз, только для проверки.
+    </footer>
+  </main>
+
+  <script>
+    function copySha() {
+      const text = document.getElementById('sha').innerText;
+      navigator.clipboard?.writeText(text);
+    }
+  </script>
+</body>
+</html>
