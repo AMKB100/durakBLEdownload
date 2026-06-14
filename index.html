@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Дурак — тестовая версия</title>
+  <meta name="description" content="Скачать тестовую Android-версию карточной игры Дурак." />
+  <meta name="theme-color" content="#0f5132" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="logo" aria-label="Логотип игры Дурак">
+        <div class="card card-left">♠</div>
+        <div class="card card-center">Д</div>
+        <div class="card card-right">♥</div>
+      </div>
+
+      <p class="eyebrow">Android · Test build</p>
+      <h1>Дурак</h1>
+      <p class="subtitle">Минималистичная тестовая версия карточной игры.</p>
+
+      <button class="download-button" type="button" id="openVersions">
+        Скачать APK
+      </button>
+
+      <p class="file-note">
+        Активная версия: <strong>v0.2</strong> · Файл: <strong>Durak-test-v2.apk</strong>
+      </p>
+
+      <div class="checksum">
+        <span>SHA256:</span>
+        <code id="sha">ВСТАВЬТЕ_SHA256_СЮДА</code>
+        <button class="copy" type="button" onclick="copySha()">Копировать</button>
+      </div>
+
+      <div class="instructions">
+        <h2>Как установить</h2>
+        <ol>
+          <li>Нажмите «Скачать APK» и выберите нужную версию.</li>
+          <li>Откройте скачанный файл на Android.</li>
+          <li>Разрешите установку из браузера, если телефон попросит.</li>
+          <li>Если Play Protect покажет предупреждение, устанавливайте только если доверяете файлу.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      Тестовая сборка. Неофициальный релиз, только для проверки.
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="versionModal" aria-hidden="true">
+    <section class="version-modal" role="dialog" aria-modal="true" aria-labelledby="versionTitle">
+      <button class="modal-close" type="button" id="closeVersions" aria-label="Закрыть окно">×</button>
+      <p class="eyebrow modal-eyebrow">Android APK</p>
+      <h2 id="versionTitle">Выберите версию</h2>
+      <div class="version-list" id="versionList"></div>
+      <button class="secondary-close" type="button" id="closeVersionsBottom">Закрыть</button>
+    </section>
+  </div>
+
+  <script>
+    function copySha() {
+      const text = document.getElementById('sha').innerText;
+      navigator.clipboard?.writeText(text);
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
